@@ -342,8 +342,8 @@ const backgroundStyle = {
    }
 
    .info-image {
- margin-bottom: -70px;
- margin-top: -60px;
+ margin-bottom: -40px;
+ margin-top: -30px;
 }
 
   .image-gallery {
