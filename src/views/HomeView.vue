@@ -206,6 +206,7 @@ const backgroundStyle = {
   transform: scaleY(1.5);
   margin-bottom: 20px;
   text-align: left;
+  line-height: 1;
 }
 .info-text-box h3 {
   font-family: 'Vast Shadow', cursive;
@@ -382,9 +383,10 @@ const backgroundStyle = {
  margin-top: -30px;
 }
 .social-buttons a {
-  padding: 7px 20px;
+  padding: 4px 10px;
   font-size: 10px;
   letter-spacing: -0.5px;
+  font-size: 9px;
 }
 
   .image-gallery {

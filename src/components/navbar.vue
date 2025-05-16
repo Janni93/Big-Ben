@@ -147,7 +147,7 @@ import { RouterLink } from 'vue-router'
 
   .navbar {
     flex-direction: column;
-    padding: px 30px;
+    padding: 30px;
     align-items: center;
     gap: 15px;
     flex-wrap: wrap;
@@ -185,7 +185,7 @@ import { RouterLink } from 'vue-router'
  .social-buttons {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 8px;
   }
 
   .social-buttons a {
@@ -199,5 +199,6 @@ import { RouterLink } from 'vue-router'
   .social-buttons i {
     font-size: 12px;
   }
+ 
 }
 </style>
