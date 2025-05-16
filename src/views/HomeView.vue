@@ -213,7 +213,7 @@ const backgroundStyle = {
   font-size: 18px;
   transform: scaleY(1.5);
   margin-bottom: 20px;
-  margin-top: -20px;
+  margin-top: -10px;
   text-align: left;
 }
 
