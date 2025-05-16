@@ -165,7 +165,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     font-size: 13px;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
   }
 
   .opening-hours li::before {

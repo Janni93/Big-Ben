@@ -12,15 +12,27 @@
       <RouterLink to="/menukort">MENUKORT</RouterLink>
     </div>
 
-    <div class="facebook-link">
-      <a
-        href="https://www.facebook.com/bigbenpubvarde/?locale=fo_FO"
-        target="_blank"
-        rel="noopener"
-      >
-        Besøg os på Facebook
-      </a>
-    </div>
+   <div class="social-buttons">
+  <a
+    href="https://www.facebook.com/bigbenpubvarde/?locale=fo_FO"
+    target="_blank"
+    rel="noopener"
+    class="facebook-btn"
+  >
+    <i class="fab fa-facebook-f"></i>
+    FACEBOOK
+  </a>
+  <a
+    href="https://www.instagram.com/"
+    target="_blank"
+    rel="noopener"
+    class="instagram-btn"
+  >
+    <i class="fab fa-instagram"></i>
+    INSTAGRAM
+  </a>
+</div>
+
   </nav>
 </template>
 
@@ -60,9 +72,12 @@ import { RouterLink } from 'vue-router'
 
 .nav-center {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   gap: 20px;
+  flex: 0 0 auto; 
+  flex-wrap: nowrap;
+  
 }
 
 .nav-center a {
@@ -79,38 +94,60 @@ import { RouterLink } from 'vue-router'
   color: #ffeace;
 }
 
-.facebook-link {
+.social-buttons {
   display: flex;
+  gap: 8px;
   justify-content: flex-end;
+  align-items: center;
+ 
 }
 
-.facebook-link a {
-  display: inline-block;
-  background-color: #470101;
-  color: #EDD7BE;
-  padding: 7px 20px;
+.social-buttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
   font-family: 'Vast Shadow', cursive;
-  font-size: 13px;
+  font-size: 10px;
   text-decoration: none;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s;
-  letter-spacing: -2px;
+  letter-spacing: -0.5px;
   transform: scaleY(1.5);
   text-align: center;
   white-space: nowrap;
+  color: #EDD7BE;
 }
 
-.facebook-link a:hover {
+.social-buttons .facebook-btn {
+  background-color: #470101;
+}
+
+.social-buttons .facebook-btn:hover {
   background-color: #5d3f31;
   transform: scale(1.05, 1.6);
 }
+
+.social-buttons .instagram-btn {
+  background-color: #470101; /* Instagram lilla */
+}
+
+.social-buttons .instagram-btn:hover {
+  background-color: #5d3f31;
+  transform: scale(1.05, 1.6);
+}
+
+.social-buttons i {
+  font-size: 14px;
+}
+
 
 @media (max-width: 768px) {
 
   .navbar {
     flex-direction: column;
-    padding: 20px 30px;
+    padding: px 30px;
     align-items: center;
     gap: 15px;
     flex-wrap: wrap;
@@ -130,7 +167,7 @@ import { RouterLink } from 'vue-router'
     width: 110px;
     height: auto;
     margin-bottom: -20px;
-    margin-top: -10px;
+    margin-top: -7px;
   }
 
   .nav-center {
@@ -145,11 +182,22 @@ import { RouterLink } from 'vue-router'
     transform: scaleY(1.4);
   }
 
-  .facebook-link a {
-    font-size: 9px;
-    letter-spacing: -1px;
-    padding: 4px 10px;
-    transform: scaleY(1.4);
+ .social-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .social-buttons a {
+    font-size: 10px;
+    padding: 4px 8px;
+    transform: none;
+    margin-bottom: 2px;
+    margin-top: -4px;
+  }
+
+  .social-buttons i {
+    font-size: 12px;
   }
 }
 </style>

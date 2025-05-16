@@ -57,10 +57,27 @@ const backgroundStyle = {
         <div class="info-text-box">
           <h2>Arrangementer & Livemusik</h2>
           <p>Vi tilbyder et bredt udvalg af kolde fadøl, specialøl fra det lokale bryggeri Warwick, farverige cocktails, lækre drinks og god cafémad leveret fra naborestauranten. Hvad end du kommer for at slappe af efter arbejde, fejre noget med vennerne eller opleve en sjov aften med quiz eller live musik, så har Big Ben noget at byde på.</p>
-          <p>Følg med på vores Facebook-side og se hvad der sker!</p>
-          <div class="facebook-link">
-            <a href="https://www.facebook.com/bigbenpubvarde/?locale=fo_FO" target="_blank" rel="noopener">Besøg os på Facebook</a>
-          </div>
+          <p>Følg med på vores socialemedier og se hvad der sker!</p>
+          <div class="social-buttons">
+  <a
+    href="https://www.facebook.com/bigbenpubvarde/?locale=fo_FO"
+    target="_blank"
+    rel="noopener"
+    class="facebook-btn"
+  >
+    <i class="fab fa-facebook-f"></i>
+    FACEBOOK
+  </a>
+  <a
+    href="https://www.instagram.com/"
+    target="_blank"
+    rel="noopener"
+    class="instagram-btn"
+  >
+    <i class="fab fa-instagram"></i>
+    INSTAGRAM
+  </a>
+</div>
         </div>
         <div class="info-image">
           <img :src="billede2" alt="Pub billede 2" />
@@ -225,27 +242,46 @@ const backgroundStyle = {
 }
 
 
-.facebook-link a {
-  display: inline-block;
-  background-color: #470101;
-  color: #EDD7BE;
+.social-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-buttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 7px 20px;
   font-family: 'Vast Shadow', cursive;
   font-size: 13px;
   text-decoration: none;
   border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s;
   letter-spacing: -2px;
   transform: scaleY(1.5);
-  margin-top: 20px;
+  text-align: center;
+  white-space: nowrap;
+  color: #EDD7BE;
 }
 
-.facebook-link a:hover {
+.social-buttons .facebook-btn,
+.social-buttons .instagram-btn {
+  background-color: #470101;
+}
+
+.social-buttons .facebook-btn:hover,
+.social-buttons .instagram-btn:hover {
   background-color: #5d3f31;
   transform: scale(1.05, 1.6);
 }
 
+.social-buttons i {
+  font-size: 14px;
+}
 
 .image-gallery {
   display: grid;
@@ -344,6 +380,11 @@ const backgroundStyle = {
    .info-image {
  margin-bottom: -40px;
  margin-top: -30px;
+}
+.social-buttons a {
+  padding: 7px 20px;
+  font-size: 10px;
+  letter-spacing: -0.5px;
 }
 
   .image-gallery {
