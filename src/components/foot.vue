@@ -54,20 +54,18 @@
   gap: 20px;
   padding: 30px 40px;
   background-color: #412c22;
-  border-radius: 10px;
   color: #EDD7BE;
   font-family: 'Markazi Text', serif;
   opacity: 0.95;
+  box-shadow: 0 -2px 2px #EDD7BE;
 }
 
-/* Ens layout for alle sektioner */
 .footer, .footer-links, .footer-booking, .footer-hours {
   flex: 1 1 22%;
   display: flex;
   flex-direction: column;
 }
 
-/* Mindre linjeafstand og margin mellem linjer */
 .footer-wrapper p,
 .footer-wrapper a,
 .footer-wrapper li {
@@ -76,7 +74,6 @@
   font-size: 20px;
 }
 
-/* Overskrifter */
 h2 {
   margin-bottom: 0px;
   font-size: 17px;
@@ -88,7 +85,6 @@ h2 {
 }
 
 
-/* Links */
 .footer-links a {
   text-decoration: none;
   color: #EDD7BE;
@@ -100,7 +96,6 @@ h2 {
   color: white;
 }
 
-/* Åbningstider */
 .opening-hours {
   list-style: none;
   padding: 0;
@@ -108,7 +103,6 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 4px;
-
 }
 
 .opening-hours li {
@@ -127,11 +121,10 @@ h2 {
 .opening-hours span:last-child {
   position: relative;
   z-index: 1;
-  background-color: #412c22; /* samme som baggrunden */
+  background-color: #412c22; 
   padding-left: 8px;
 }
 
-/* Stiplet linje mellem spans */
 .opening-hours li::before {
   content: "";
   position: absolute;
@@ -143,14 +136,13 @@ h2 {
   z-index: 0;
 }
 
-
 @media (max-width: 768px) {
   .footer-wrapper {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
     text-align: left;
-    
+
   }
 
   .footer,
@@ -181,7 +173,7 @@ h2 {
     position: absolute;
     top: 50%;
     left: 0;
-    width: 80%; /* Tilpas længden på linjen her */
+    width: 80%;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
     z-index: 0;
   }
@@ -206,7 +198,7 @@ h2 {
   .footer-wrapper p,
   .footer-wrapper a,
   .footer-wrapper li {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 

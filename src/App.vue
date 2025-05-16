@@ -1,26 +1,34 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import { watch } from 'vue'
+import { useRoute } from 'vue-router'
 import Navbar from '@/components/navbar.vue'
 import Foot from '@/components/foot.vue'
+
+const route = useRoute()
+
 </script>
 
 <template>
   <Navbar />
-
-  <RouterView />
-
+ 
+    <RouterView />
+  
   <Foot />
 </template>
 
 <style>
-/* Fjern margin/padding og maks bredde for at video kan fylde hele bredden */
-body, html {
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 #app {
   margin: 0;
   padding: 0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 </style>

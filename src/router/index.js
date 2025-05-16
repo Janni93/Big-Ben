@@ -16,16 +16,19 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
     },
     {
-      path: '/Menukort',
-      name: 'MENUKORT',
+      path: '/menukort',
+      name: 'menukort',
       component: Menukort,
     },
   ],
-
-  // 👇 Tilføj dette for at scrolle til toppen
   scrollBehavior(to, from, savedPosition) {
-    return { top: 0 }
-  }
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ top: 0, left: 0 });
+    }, 100); // giver routeren tid til at skifte view
+  });
+}
+  
 })
 
 export default router

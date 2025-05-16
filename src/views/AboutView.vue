@@ -1,27 +1,29 @@
 <template>
-  <!-- Baggrundsbillede -->
-  <div :style="backgroundStyle"></div>
-  <div class="background-overlay"></div>
+  <div class="page-wrapper">
+    <!-- Baggrund -->
+    <div class="background"></div>
+    <div class="background-overlay"></div>
 
-  <!-- Indhold ovenpå -->
-  <div class="content-wrapper">
-    <main class="grid-container">
-      <h1 class="main-heading">Begivenheder</h1>
+    <!-- Indhold -->
+    <div class="content-wrapper">
+      <main class="grid-container">
+        <img src="@/assets/begivenhedskilt.png" alt="Begivenheder" class="main-heading" />
 
-      <div v-for="kalenderItem in kalenderItems" :key="kalenderItem.id" class="card">
-        <h2>{{ kalenderItem.title }}</h2>
-        <p>{{ kalenderItem.description }}</p>
-        <img :src="kalenderItem.image" alt="" @click="åbnPopup(kalenderItem)" />
-        <div v-if="kalenderItem.link">
-          <a :href="kalenderItem.link" target="_blank">Link</a>
+        <div v-for="kalenderItem in kalenderItems" :key="kalenderItem.id" class="card">
+          <h2>{{ kalenderItem.title }}</h2>
+          <p>{{ kalenderItem.description }}</p>
+          <img :src="kalenderItem.image" alt="" @click="åbnPopup(kalenderItem)" />
+          <div v-if="kalenderItem.link">
+            <a :href="kalenderItem.link" target="_blank">Link</a>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <div v-if="visPopup" class="popupBoks" @click="lukPopup">
-      <div class="popupIndhold" @click.stop>
-        <button class="lukKnap" @click="lukPopup">✕</button>
-        <img :src="valgtBegivenhed.image" alt="Udvidet billede" class="expanded-image" />
+      <div v-if="visPopup" class="popupBoks" @click="lukPopup">
+        <div class="popupIndhold" @click.stop>
+          <button class="lukKnap" @click="lukPopup">✕</button>
+          <img :src="valgtBegivenhed.image" alt="Udvidet billede" class="expanded-image" />
+        </div>
       </div>
     </div>
   </div>
@@ -29,18 +31,15 @@
 
 <script setup>
 import { ref } from 'vue'
-import bgImage from '@/assets/BigBenBaggrund.png'
-
-import image1 from '@/assets/karsten mathiasen.jpg'
-import image2 from '@/assets/bamse 25.jpg'
-import image3 from '@/assets/Sommer musik.jpg'
+import image1 from '@/assets/karstenmathiasen.jpg'
+import image2 from '@/assets/bamse25.jpg'
+import image3 from '@/assets/sommermusik.jpg'
 import image4 from '@/assets/thomas.jpg'
-import image5 from '@/assets/Ole gas.jpg'
-import image6 from '@/assets/rene september.jpg'
-import image7 from '@/assets/bamse okstober.jpg'
-import image8 from '@/assets/j dag plakat.jpg'
-import image9 from '@/assets/Thomas jones.jpg'
-
+import image5 from '@/assets/olegas.jpg'
+import image6 from '@/assets/reneseptember.jpg'
+import image7 from '@/assets/bamseokstober.jpg'
+import image8 from '@/assets/jdagplakat.jpg'
+import image9 from '@/assets/thomasjones.jpg'
 
 const kalenderItems = ref([
   { id: 1, title: 'Karsten Mathiasen', description: 'D. 2. Maj 2025', image: image1 },
@@ -52,7 +51,6 @@ const kalenderItems = ref([
   { id: 7, title: 'Bamse Show', description: 'D. 31. Oktober 2025', image: image7 },
   { id: 8, title: 'J-Dag på Big Ben', description: 'D. 7. November 2025', image: image8 },
   { id: 9, title: 'Thomas Jones', description: 'D. 28. November 2025', image: image9 },
-
 ])
 
 const visPopup = ref(false)
@@ -67,22 +65,38 @@ function lukPopup() {
   visPopup.value = false
   valgtBegivenhed.value = null
 }
-
-const backgroundStyle = {
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  width: '100vw',
-  height: '100vh',
-  backgroundImage: `url(${bgImage})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
-  zIndex: -2
-}
 </script>
 
 <style scoped>
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+ 
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('@/assets/BigBenBaggrund.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(65, 44, 34, 0.4);
+  z-index: -1;
+}
+
 .content-wrapper {
   position: relative;
   z-index: 1;
@@ -98,7 +112,7 @@ const backgroundStyle = {
 }
 
 .card {
-  background-color: #edd7becb;;
+  background-color: #edd7becb;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
@@ -156,7 +170,7 @@ p {
   width: 80vw;
   max-width: 500px;
   aspect-ratio: 1 / 1;
-  background-color: #EDD7BE;
+  background-color: #edd7becb;
   padding: 0;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -195,23 +209,28 @@ p {
 
 .main-heading {
   grid-column: 1 / -1;
-  text-align: center;
-  font-family: 'Vast Shadow', cursive;
-  font-size: 50px;
-  color: #EDD7BE;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  text-transform: uppercase;
-  margin-bottom: -10px;
-  margin-top: 25px;
-  letter-spacing: -2px;
-  transform: scaleY(1.5);
+  justify-self: center;
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 0;
+  margin-top: 20px;
 }
 
-@media (max-width: 768px){
+  @media (max-width: 768px) {
+  .grid-container {
+    margin: 10px;
+    padding: 0;
+    justify-items: center; /* ← sikrer centreret placering */
+  }
+
+  .card {
+    margin: 0 auto; /* ← ekstra sikkerhed for centreret kort */
+  }
+
   .main-heading {
-  
-  font-size: 35px;
-  
+    max-width: 80%;
+    margin: 10px auto;
+  }
 }
-}
+
 </style>

@@ -7,11 +7,10 @@
       <p class="menu-info">Hos Big Ben serverer vi ikke bare drikkevarer – vi sørger også for, at du ikke går sulten hjem. I samarbejde med naborestauranten Gl. Daws tilbyder vi lækker pubmad, der passer perfekt til stemningen og en god øl i hånden.
 
         Uanset om du er til en saftig burger, sprøde snacks eller klassiske favoritter, har vi noget, der mætter og glæder. </p>
-      
-      
+
         <div class="menu-row">
-        <img src="@/assets/MenukortBB.jpg" alt="Menukort side 1" class="sidebillede" />
-        <img src="@/assets/MenukortBB2.jpg" alt="Menukort side 2" class="sidebillede" />
+        <img :src="menu1" alt="Menukort side 1" class="sidebillede" />
+        <img :src="menu2" alt="Menukort side 2" class="sidebillede" />
       </div>
     </div>
 
@@ -19,10 +18,10 @@
       <h2 class="drikkevarer-heading">Skål for hyggen</h2>
       <p class="menu-info">Hos Big Ben tilbyder vi et bredt udvalg af drikkevarer – lige fra den belgiske specialøl Grimbergen til en lækker iskaffe med karamel. Vi er stolte af vores samarbejde med det lokale bryggeri Warwick, hvis øl du naturligvis også finder på kortet.
 
-        Men hos os handler drikkevarer ikke kun om smag – det handler om oplevelsen. Derfor har vi skabt en hyggelig og afslappet atmosfære, hvor du kan nyde dine favoritter i godt selskab med venner, familie eller kolleger.</p>
+        Men hos os handler drikkevarer ikke kun om smag – det handler om oplevelsen. Derfor har vi skabt en hyggelig og afslappet atmosfære, hvor du kan nyde dine favoritter i godt selskab med venner, familie eller kollegaer.</p>
       <div class="menu-row drinks-column">
-        <img src="@/assets/drikkevarer.jpg" alt="Menukort side 3" class="drinks-img" />
-        <img src="@/assets/drikkevarer2.jpg" alt="Menukort side 4" class="drinks-img" />
+        <img :src="drinks1" alt="Menukort side 3" class="drinks-img" />
+        <img :src="drinks2" alt="Menukort side 4" class="drinks-img" />
       </div>
     </div>
 
@@ -32,7 +31,7 @@
 
         Uanset om du er til det søde, det friske eller det stærke, står vores bartendere klar til at mixe noget, der rammer præcis din smag. Alle cocktails serveres med kærlighed – og et glimt i øjet.</p>
       <div class="menu-row drinks-column">
-        <img src="@/assets/cocktail.jpg" alt="Menukort side 5" class="drinks-img" />
+        <img :src="cocktail" alt="Menukort side 5" class="drinks-img" />
         <h2 class="drikkevarer-heading">Skål og velbekomme</h2>
         <h3 class="drikkevarer-heading">- det er cocktail o'clock på Big Ben!</h3>
       </div>
@@ -41,7 +40,11 @@
 </template>
 
 <script setup>
-// Ingen JS nødvendig
+import menu1 from '@/assets/menukortbb.jpg'
+import menu2 from '@/assets/menukortbb2.jpg'
+import drinks1 from '@/assets/drikkevarer.jpg'
+import drinks2 from '@/assets/drikkevarer2.jpg'
+import cocktail from '@/assets/cocktail.jpg'
 </script>
 
 <style scoped>
@@ -86,7 +89,7 @@
 .menukort-page h2 {
   text-align: center;
   font-family: 'Vast Shadow', cursive;
-  font-size: 30px;
+  font-size: 35px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -100,7 +103,7 @@
 .menukort-page h3 {
   text-align: center;
   font-family: 'Vast Shadow', cursive;
-  font-size: 30px;
+  font-size: 25px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   margin-bottom: 40px;
@@ -108,7 +111,7 @@
   letter-spacing: -2px;
   transform: scaleY(1.5);
   color: #412c22;
- 
+
 }
 .menu-info {
   text-align: center;
@@ -118,9 +121,10 @@
   margin-top: auto;
   margin-left: 80px;
   margin-right: 80px;
- margin-bottom: 20px;
+  margin-bottom: 20px;
   max-width: 100%;
   padding: 0;
+  line-height: 1;
 }
 
 .drikkevarer-heading {
@@ -154,15 +158,19 @@
 
 @media (max-width: 768px) {
   .menukort-page h2 {
-    font-size: 24px;
+    font-size: 22px;
+     line-height: 1.1;
   }
 
   .menukort-page h3 {
     font-size: 18px;
+     line-height: 1.1;
   }
 
   .menu-info {
     font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .menu-row {

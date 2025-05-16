@@ -1,5 +1,14 @@
 <script setup>
-import bgImage from '@/assets/BigBenBaggrund.png'
+import bgImage from '@/assets/bigbenbaggrund.png'
+import heroVideo from '@/assets/bigbenhero.mp4'
+import billede1 from '@/assets/thomasbigben.jpg'
+import billede2 from '@/assets/bigbenude.jpg'
+import galleri1 from '@/assets/mariaogsofie.jpg'
+import galleri2 from '@/assets/madsbigbenlille.jpg'
+import galleri3 from '@/assets/maria.jpg'
+import tilbud1 from '@/assets/studierabat.jpg'
+import tilbud2 from '@/assets/studierabat2.jpg'
+
 
 const backgroundStyle = {
   position: 'fixed',
@@ -22,7 +31,7 @@ const backgroundStyle = {
   <main class="content-wrapper">
     <div class="hero-video">
       <video muted autoplay loop playsinline>
-        <source src="@/assets/Bigbenhero.mp4" type="video/mp4" />
+        <source :src="heroVideo" type="video/mp4" />
       </video>
       <div class="video-overlay">
         <h1 class="mainheadline">BIG BEN</h1>
@@ -40,7 +49,7 @@ const backgroundStyle = {
           <p>Big Ben er ikke bare en pub – det er der, hvor de bedste minder starter.</p>
         </div>
         <div class="info-image">
-          <img src="@/assets/mads.png" alt="Pub billede 1" />
+          <img :src="billede1" alt="Pub billede 1" />
         </div>
       </div>
 
@@ -54,16 +63,20 @@ const backgroundStyle = {
           </div>
         </div>
         <div class="info-image">
-          <img src="@/assets/BigUde.jpg" alt="Pub billede 2" />
+          <img :src="billede2" alt="Pub billede 2" />
         </div>
       </div>
     </div>
 
-    <!-- Galleri -->
     <section class="image-gallery">
-      <img src="@/assets/MARIAOGSOFIE.jpg" alt="Galleri billede 1" />
-      <img src="@/assets/mads.png" alt="Galleri billede 2" />
-      <img src="@/assets/Maria.jpg" alt="Galleri billede 3" />
+      <img :src="galleri1" alt="Galleri billede 1" />
+      <img :src="galleri2" alt="Galleri billede 2" />
+      <img :src="galleri3" alt="Galleri billede 3" />
+    </section>
+
+     <section class="tilbud">
+      <img :src="tilbud1" alt="studierabat" />
+      <img :src="tilbud2" alt="studierabat2" />
     </section>
   </main>
 </template>
@@ -72,7 +85,7 @@ const backgroundStyle = {
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
 
-/* Baggrund */
+
 .content-wrapper {
   position: relative;
   z-index: 1;
@@ -84,6 +97,7 @@ const backgroundStyle = {
   width: 100vw;
   height: 80vh;
   overflow: hidden;
+  border-bottom: 2px solid #edd7becb;
 }
 
 .hero-video video {
@@ -92,9 +106,9 @@ const backgroundStyle = {
   object-fit: cover;
   display: block;
   filter: contrast(1.1) saturate(1.1);
+ 
 }
 
-/* Tekst-overlay */
 .video-overlay {
   position: absolute;
   top: 75%;
@@ -116,24 +130,26 @@ const backgroundStyle = {
 .video-overlay .mainheadline {
   font-size: 60px;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1;
+    letter-spacing: 0.5px;
 }
 
 .video-overlay .subheadline {
-  font-size: 42px;
+  font-size: 38px;
   margin: -5px 0 0 0;
-  line-height: 1.1;
+  line-height: 1;
+    letter-spacing: 0.5px;
 }
 
 .video-overlay .tagline {
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Markazi Text', serif;
   font-style: italic;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   margin-top: 0;
+  letter-spacing: 0.5px;
 }
 
-/* Info sektion */
 .info-section {
   display: flex;
   flex-direction: column;
@@ -169,14 +185,14 @@ const backgroundStyle = {
 
 .info-text-box h2 {
   font-family: 'Vast Shadow', cursive;
-  font-size: 20px;
+  font-size: 22px;
   transform: scaleY(1.5);
   margin-bottom: 20px;
   text-align: left;
 }
 .info-text-box h3 {
   font-family: 'Vast Shadow', cursive;
-  font-size: 16px;
+  font-size: 18px;
   transform: scaleY(1.5);
   margin-bottom: 20px;
   margin-top: -20px;
@@ -184,7 +200,7 @@ const backgroundStyle = {
 }
 
 .info-text-box p {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 15px;
   font-family: 'Markazi Text', serif;
   line-height: 1.3;
@@ -204,7 +220,11 @@ const backgroundStyle = {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Facebook-knap */
+.info-image img:hover {
+  transform: scale(1.03);
+}
+
+
 .facebook-link a {
   display: inline-block;
   background-color: #470101;
@@ -226,14 +246,16 @@ const backgroundStyle = {
   transform: scale(1.05, 1.6);
 }
 
-/* Galleri */
+
 .image-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 60px auto;
-  padding: 0 20px;
+  padding: 20px;
+  background-color: #edd7becb;
+
 }
 
 .image-gallery img {
@@ -249,22 +271,47 @@ const backgroundStyle = {
   transform: scale(1.03);
 }
 
-/* Responsivt */
+.tilbud {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* To kolonner */
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.tilbud img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  justify-self: center;
+}
+
+
+.tilbud img:hover {
+  transform: scale(1.03);
+}
+
+
 @media (max-width: 768px) {
   .hero-video {
-    height: 50vh;
+    height: 45vh;
   }
 
   .video-overlay .mainheadline {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .video-overlay .subheadline {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .video-overlay .tagline {
-    font-size: 12px;
+    font-size: 10px;
     padding: 0 10px;
     text-align: center;
   }
@@ -277,12 +324,25 @@ const backgroundStyle = {
     text-align: left;
   }
 
-  .info-text-box h3 {
-    font-size: 16px;
-  }
+  .info-text-box h2 {
+  font-size: 14px;
+    letter-spacing: -0.5px;
+}
+.info-text-box h3 {
+  font-size: 12px;
+   letter-spacing: -0.5px;
+}
+
+.info-text-box p {
+  font-size: 18px;
+   }
 
   .image-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .tilbud {
+    grid-template-columns: 1fr; /* Enkelt kolonne på mobil */
   }
 }
 </style>

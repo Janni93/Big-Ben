@@ -1,20 +1,17 @@
 <template>
   <nav class="navbar">
-    <!-- Venstre: Logo -->
     <div class="nav-left">
       <RouterLink to="/">
         <img src="@/assets/logo.png" alt="Logo" class="logo" />
       </RouterLink>
     </div>
 
-    <!-- Midt: Links -->
     <div class="nav-center">
       <RouterLink to="/">FORSIDE</RouterLink>
       <RouterLink to="/about">BEGIVENHEDER</RouterLink>
       <RouterLink to="/menukort">MENUKORT</RouterLink>
     </div>
 
-    <!-- Højre: Facebook-knap -->
     <div class="facebook-link">
       <a
         href="https://www.facebook.com/bigbenpubvarde/?locale=fo_FO"
@@ -35,10 +32,10 @@ import { RouterLink } from 'vue-router'
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&display=swap');
 
 .navbar {
-  position: sticky;
+  position: relative;
   top: 0;
-  z-index: 1000;
-  background-color: #412c22;
+  z-index: 9999;
+   background-color: rgba(65, 44, 34, 0.95);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,14 +43,11 @@ import { RouterLink } from 'vue-router'
   width: 100%;
   height: 110px;
   box-sizing: border-box;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
-  opacity: 0.95;
+  box-shadow: 0 2px 2px #EDD7BE;
   flex-wrap: nowrap;
 }
 
-/* Venstre */
 .nav-left {
-  flex: 1;
   display: flex;
   align-items: center;
 }
@@ -64,14 +58,11 @@ import { RouterLink } from 'vue-router'
   margin-top: 8px;
 }
 
-/* Midt */
 .nav-center {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  flex: 1;
-  flex-wrap: nowrap;
 }
 
 .nav-center a {
@@ -88,9 +79,7 @@ import { RouterLink } from 'vue-router'
   color: #ffeace;
 }
 
-/* Højre */
 .facebook-link {
-  flex: 1;
   display: flex;
   justify-content: flex-end;
 }
@@ -104,7 +93,7 @@ import { RouterLink } from 'vue-router'
   font-size: 13px;
   text-decoration: none;
   border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s;
   letter-spacing: -2px;
   transform: scaleY(1.5);
@@ -117,14 +106,15 @@ import { RouterLink } from 'vue-router'
   transform: scale(1.05, 1.6);
 }
 
-/* RESPONSIV JUSTERING */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+
   .navbar {
     flex-direction: column;
     padding: 15px 30px;
     align-items: center;
     gap: 15px;
     flex-wrap: wrap;
+    height: auto;
   }
 
   .nav-left,
@@ -132,45 +122,34 @@ import { RouterLink } from 'vue-router'
   .facebook-link {
     width: 100%;
     justify-content: center;
+    flex: none;
+    text-align: center;
   }
 
   .logo {
-    width: 130px;
+    width: 110px;
     height: auto;
+    margin-bottom: -20px;
+    margin-top: -10px;
   }
 
   .nav-center {
-    gap: 16px;
+    gap: 5px;
     flex-wrap: wrap;
+    margin-bottom: -5px;
   }
 
   .nav-center a {
-    font-size: 15px;
+    font-size: 10px;
     letter-spacing: -1px;
     transform: scaleY(1.4);
   }
 
   .facebook-link a {
-    font-size: 12px;
+    font-size: 9px;
     letter-spacing: -1px;
-    padding: 6px 18px;
+    padding: 4px 10px;
     transform: scaleY(1.4);
-  }
-}
-
-@media (max-width: 768px) {
-  .logo {
-    width: 100px;
-    margin-bottom: -15px;
-  }
-
-  .nav-center a {
-    font-size: 13px;
-  }
-
-  .facebook-link a {
-    font-size: 11px;
-    padding: 5px 15px;
   }
 }
 </style>
