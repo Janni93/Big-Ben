@@ -67,11 +67,10 @@ function lukPopup() {
 }
 </script>
 
-<style scoped>
+<style scoped> 
 .page-wrapper {
   position: relative;
   min-height: 100vh;
- 
 }
 
 .background {
@@ -108,7 +107,10 @@ function lukPopup() {
   gap: 40px;
   justify-items: center;
   padding: 10px 20px;
-  margin: 20px 50px 40px 50px;
+  margin: 20px auto 40px auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .card {
@@ -119,6 +121,8 @@ function lukPopup() {
   text-align: center;
   transition: transform 0.2s;
   max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card:hover {
@@ -127,12 +131,14 @@ function lukPopup() {
 
 .card img {
   border-radius: 10px;
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   object-fit: cover;
   object-position: center;
   cursor: pointer;
   display: block;
+  margin: 0 auto;
 }
 
 h2 {
@@ -216,20 +222,26 @@ p {
   margin-top: 20px;
 }
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
   .grid-container {
-    margin: 10px;
-    padding: 0;
-    justify-items: center; /* ← sikrer centreret placering */
+    margin: 30 auto;
+    padding: 10px;
+    justify-items: center;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .card {
-    margin: 0 auto; /* ← ekstra sikkerhed for centreret kort */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 350px;
   }
 
   .main-heading {
-    max-width: 80%;
-    margin: 10px auto;
+    max-width: 95%;
+    margin: 20px auto;
+    margin-bottom: -0px;
   }
 }
 

@@ -298,6 +298,10 @@ const backgroundStyle = {
 
 
 @media (max-width: 768px) {
+
+  .info-section {
+  margin-bottom: -20px;
+}
   .hero-video {
     height: 45vh;
   }
@@ -337,12 +341,18 @@ const backgroundStyle = {
   font-size: 18px;
    }
 
+   .info-image {
+ margin-bottom: -70px;
+ margin-top: -60px;
+}
+
   .image-gallery {
     grid-template-columns: 1fr;
   }
 
   .tilbud {
-    grid-template-columns: 1fr; /* Enkelt kolonne på mobil */
+    grid-template-columns: 1fr; 
+    margin-top: -30px;
   }
 }
 </style>

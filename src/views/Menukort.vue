@@ -159,18 +159,19 @@ import cocktail from '@/assets/cocktail.jpg'
 @media (max-width: 768px) {
   .menukort-page h2 {
     font-size: 22px;
-     line-height: 1.1;
+     line-height: 1.2;
   }
 
   .menukort-page h3 {
-    font-size: 18px;
-     line-height: 1.1;
+    font-size: 16px;
+     line-height: 1.2;
+     margin-top: 0px;
   }
 
   .menu-info {
     font-size: 16px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .menu-row {
@@ -179,6 +180,12 @@ import cocktail from '@/assets/cocktail.jpg'
 
   .drikkevarer-heading {
     font-size: 26px;
+    
   }
+.drikkevarer-heading h3 {
+    font-size: 16px;
+    
+  }
+  
 }
 </style>

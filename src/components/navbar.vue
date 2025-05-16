@@ -110,7 +110,7 @@ import { RouterLink } from 'vue-router'
 
   .navbar {
     flex-direction: column;
-    padding: 15px 30px;
+    padding: 20px 30px;
     align-items: center;
     gap: 15px;
     flex-wrap: wrap;
