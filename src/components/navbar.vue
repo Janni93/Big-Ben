@@ -167,7 +167,7 @@ import { RouterLink } from 'vue-router'
     width: 110px;
     height: auto;
     margin-bottom: -20px;
-    margin-top: -7px;
+    margin-top: -25px;
   }
 
   .nav-center {
@@ -192,7 +192,7 @@ import { RouterLink } from 'vue-router'
     font-size: 10px;
     padding: 4px 8px;
     transform: none;
-    margin-bottom: 2px;
+    margin-bottom: -15px;
     margin-top: -4px;
   }
 

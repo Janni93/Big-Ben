@@ -161,15 +161,16 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2000;
   padding: 20px;
+
   overflow-y: auto;
-  margin-top: 80px;
+  margin-top: 0px;
 }
 
 .popupIndhold {

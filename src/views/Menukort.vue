@@ -4,9 +4,11 @@
   <div class="menukort-page">
     <div class="menu-box">
       <h2>Mad med smag og sjæl</h2>
-      <p class="menu-info">Hos Big Ben serverer vi ikke bare drikkevarer – vi sørger også for, at du ikke går sulten hjem. I samarbejde med naborestauranten Gl. Daws tilbyder vi lækker pubmad, der passer perfekt til stemningen og en god øl i hånden.
+      <p class="menu-info">Hos Big Ben serverer vi ikke bare drikkevarer – vi sørger også for, at du ikke går sulten hjem. 
+      </p>
 
-        Uanset om du er til en saftig burger, sprøde snacks eller klassiske favoritter, har vi noget, der mætter og glæder. </p>
+       <p class="menu-info1">I samarbejde med naborestauranten Gl. Daws tilbyder vi lækker pubmad, der passer perfekt til stemningen og en god øl i hånden. Uanset om du er til en saftig burger, sprøde snacks eller klassiske favoritter, har vi noget, der mætter og glæder. </p>
+       <p class="menu-info1">Køkkenet har åbent: Tirsdag - Lørdag fra 11:30 - 19:30  </p>
 
         <div class="menu-row">
         <img :src="menu1" alt="Menukort side 1" class="sidebillede" />
@@ -16,7 +18,8 @@
 
     <div class="menu-box">
       <h2 class="drikkevarer-heading">Skål for hyggen</h2>
-      <p class="menu-info">Hos Big Ben tilbyder vi et bredt udvalg af drikkevarer – lige fra den belgiske specialøl Grimbergen til en lækker iskaffe med karamel. Vi er stolte af vores samarbejde med det lokale bryggeri Warwick, hvis øl du naturligvis også finder på kortet.
+      <p class="menu-info">Hos Big Ben tilbyder vi et bredt udvalg af drikkevarer – lige fra den belgiske specialøl Grimbergen til en lækker iskaffe med karamel. </p>
+        <p class="menu-info1">Vi er stolte af vores samarbejde med det lokale bryggeri Warwick, hvis øl du naturligvis også finder på kortet.
 
         Men hos os handler drikkevarer ikke kun om smag – det handler om oplevelsen. Derfor har vi skabt en hyggelig og afslappet atmosfære, hvor du kan nyde dine favoritter i godt selskab med venner, familie eller kollegaer.</p>
       <div class="menu-row drinks-column">
@@ -27,9 +30,9 @@
 
     <div class="menu-box">
       <h2 class="drikkevarer-heading">Tjek vores cocktailkort</h2>
-      <p class="menu-info">Her finder du et udvalg af klassiske favoritter og farverige overraskelser, der passer perfekt til både hyggelige stunder og festlige aftener.
+      <p class="menu-info">Her finder du et udvalg af klassiske favoritter og farverige overraskelser, der passer perfekt til både hyggelige stunder og festlige aftener.</p>
 
-        Uanset om du er til det søde, det friske eller det stærke, står vores bartendere klar til at mixe noget, der rammer præcis din smag. Alle cocktails serveres med kærlighed – og et glimt i øjet.</p>
+        <p class="menu-info1">Uanset om du er til det søde, det friske eller det stærke, står vores bartendere klar til at mixe noget, der rammer præcis din smag. Alle cocktails serveres med kærlighed – og et glimt i øjet.</p>
       <div class="menu-row drinks-column">
         <img :src="cocktail" alt="Menukort side 5" class="drinks-img" />
         <h2 class="drikkevarer-heading">Skål og velbekomme</h2>
@@ -127,6 +130,20 @@ import cocktail from '@/assets/cocktail.jpg'
   line-height: 1;
 }
 
+.menu-info1 {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Markazi Text', serif;
+  color: #412c22;
+  margin-top: -20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 20px;
+  max-width: 100%;
+  padding: 0;
+  line-height: 1;
+}
+
 .drikkevarer-heading {
   margin-top: 20px;
   text-align: center;
@@ -169,6 +186,12 @@ import cocktail from '@/assets/cocktail.jpg'
   }
 
   .menu-info {
+    font-size: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .menu-info1 {
     font-size: 16px;
     margin-left: 0px;
     margin-right: 0px;

@@ -1,6 +1,6 @@
 <script setup>
 import bgImage from '@/assets/bigbenbaggrund.png'
-import heroVideo from '@/assets/bigbenhero.mp4'
+import heroVideo from '@/assets/herovideo.mp4'
 import billede1 from '@/assets/thomasbigben.jpg'
 import billede2 from '@/assets/bigbenude.jpg'
 import galleri1 from '@/assets/mariaogsofie.jpg'
