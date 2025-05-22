@@ -55,8 +55,8 @@ const backgroundStyle = {
 
       <div class="info-row reverse">
         <div class="info-text-box">
-          <h2>Arrangementer & Livemusik</h2>
-          <p>Vi tilbyder et bredt udvalg af kolde fadøl, specialøl fra det lokale bryggeri Warwick, farverige cocktails, lækre drinks og god cafémad leveret fra naborestauranten. Hvad end du kommer for at slappe af efter arbejde, fejre noget med vennerne eller opleve en sjov aften med quiz eller live musik, så har Big Ben noget at byde på.</p>
+          <h2>Begivenheder & Livemusik</h2>
+          <p>Vi tilbyder et bredt udvalg af kolde fadøl, specialøl fra det lokale bryggeri Warwick, farverige cocktails, lækre drinks og god cafémad leveret fra naborestauranten. Hvad end du kommer for at slappe af efter arbejde, fejre noget med vennerne eller opleve en sjov aften med quiz eller live musik, så har Big Ben noget at byde på. Desuden tilbyder vi udendørsservering, så du kan nyde solen, mens ølen kommer til dig.</p>
           <p>Følg med på vores socialemedier og se hvad der sker!</p>
           <div class="social-buttons">
   <a
@@ -84,6 +84,25 @@ const backgroundStyle = {
         </div>
       </div>
     </div>
+
+<div class="info-section container">
+      <div class="info-row">
+        <div class="info-text-box">
+          <h2>Faciliteter på Big Ben</h2>
+          
+          <p>Big Ben byder på to etager fyldt med hygge, underholdning og afslappet stemning. Uanset om du er til en stille øl med vennerne eller lidt venlig konkurrence, har vi faciliteterne klar.
+          Der er 2 poolborde til hyggelige dueller.
+          Bordfodbold til de hurtige kampe.
+          To skærme til live sport og store øjeblikke.
+          Der kan lånes terninger og spillekort.
+          Der er 2 separate rygerum og gratis Wi-Fi, så du nemt kan være online.
+          </p>
+        </div>
+        <div class="info-image">
+          <img :src="billede1" alt="Pub billede 1" />
+        </div>
+      </div>
+</div>
 
     <section class="image-gallery">
       <img :src="galleri1" alt="Galleri billede 1" />

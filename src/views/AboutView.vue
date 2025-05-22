@@ -1,10 +1,10 @@
 <template>
   <div class="page-wrapper">
-    <!-- Baggrund -->
+
     <div class="background"></div>
     <div class="background-overlay"></div>
 
-    <!-- Indhold -->
+ 
     <div class="content-wrapper">
       <main class="grid-container">
         <img src="@/assets/begivenhedskilt.png" alt="Begivenheder" class="main-heading" />

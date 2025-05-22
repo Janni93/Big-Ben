@@ -25,7 +25,7 @@ const router = createRouter({
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({ top: 0, left: 0 });
-    }, 100); // giver routeren tid til at skifte view
+    }, 100); 
   });
 }
   

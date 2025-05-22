@@ -84,7 +84,6 @@ h2 {
   margin-bottom: 10px;
 }
 
-
 .footer-links a {
   text-decoration: none;
   color: #EDD7BE;

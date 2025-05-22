@@ -91,7 +91,7 @@ import { RouterLink } from 'vue-router'
 }
 
 .nav-center a:hover {
-  color: #ffeace;
+  color: #ffffff;
 }
 
 .social-buttons {
@@ -130,7 +130,7 @@ import { RouterLink } from 'vue-router'
 }
 
 .social-buttons .instagram-btn {
-  background-color: #470101; /* Instagram lilla */
+  background-color: #470101; 
 }
 
 .social-buttons .instagram-btn:hover {
