@@ -40,17 +40,19 @@ import image6 from '@/assets/reneseptember.jpg'
 import image7 from '@/assets/bamseokstober.jpg'
 import image8 from '@/assets/jdagplakat.jpg'
 import image9 from '@/assets/thomasjones.jpg'
+import image10 from '@/assets/mandagstræf.jpg'
 
 const kalenderItems = ref([
-  { id: 1, title: 'Karsten Mathiasen', description: 'D. 2. Maj 2025', image: image1 },
-  { id: 2, title: 'Bamse Show', description: 'D. 25. Maj 2025', image: image2 },
-  { id: 3, title: 'Sommer Musik', description: 'Hver Lørdag hele sommeren', image: image3 },
-  { id: 4, title: 'Thomas Pedersen', description: 'D. 7. September 2025', image: image4 },
-  { id: 5, title: 'Ole Gas', description: 'D. 26. September 2025', image: image5 },
-  { id: 6, title: 'René Jacobsen synger Tommy', description: 'D. 26. September 2025', image: image6 },
-  { id: 7, title: 'Bamse Show', description: 'D. 31. Oktober 2025', image: image7 },
-  { id: 8, title: 'J-Dag på Big Ben', description: 'D. 7. November 2025', image: image8 },
-  { id: 9, title: 'Thomas Jones', description: 'D. 28. November 2025', image: image9 },
+  { id: 9, title: 'Mandagstræf', description: 'Hver mandag fra Maj - September', image: image10 },
+  { id: 1, title: 'Karsten Mathiasen', description: 'Fredag D. 2. Maj 2025', image: image1 },
+  { id: 2, title: 'Bamse Show', description: 'Fredag D. 25. Maj 2025', image: image2 },
+  { id: 3, title: 'Sommer Musik', description: 'Hver Lørdag fra Maj - September', image: image3 },
+  { id: 4, title: 'Thomas Pedersen', description: 'Fredag D. 7. September 2025', image: image4 },
+  { id: 5, title: 'Ole Gas', description: 'Fredag D. 26. September 2025', image: image5 },
+  { id: 6, title: 'René Jacobsen synger Tommy', description: 'Fredag D. 26. September 2025', image: image6 },
+  { id: 7, title: 'Bamse Show', description: 'Fredag D. 31. Oktober 2025', image: image7 },
+  { id: 8, title: 'J-Dag på Big Ben', description: 'Fredag D. 7. November 2025', image: image8 },
+  { id: 9, title: 'Thomas Jones', description: 'Fredag D. 28. November 2025', image: image9 },
 ])
 
 const visPopup = ref(false)
@@ -72,6 +74,8 @@ function lukPopup() {
   position: relative;
   min-height: 100vh;
 }
+.main-heading{
+opacity: 80%;}
 
 .background {
   position: fixed;
@@ -161,14 +165,13 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2000;
   padding: 20px;
-
   overflow-y: auto;
   margin-top: 0px;
 }
@@ -186,6 +189,7 @@ p {
   align-items: center;
   overflow: hidden;
   position: relative;
+  margin-top: 50px;
 }
 
 .expanded-image {
@@ -197,8 +201,8 @@ p {
 
 .lukKnap {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 25px;
+  right: 27px;
   background: transparent;
   border: none;
   font-size: 28px;

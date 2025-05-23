@@ -6,7 +6,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Big-Ben', 
+  base: '', 
   plugins: [
     vue(),
     // vueDevTools(), // slået fra for at fjerne overlay-ikonet

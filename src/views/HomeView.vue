@@ -41,6 +41,7 @@ const backgroundStyle = {
     </div>
 
     <div class="info-section container">
+      <img src="@/assets/happyhour.png" alt="happyhour" class="main-heading" />
       <div class="info-row">
         <div class="info-text-box">
           <h2>Velkommen til Big Ben</h2>
@@ -90,8 +91,8 @@ const backgroundStyle = {
         <div class="info-text-box">
           <h2>Faciliteter på Big Ben</h2>
           
-          <p>Big Ben byder på to etager fyldt med hygge, underholdning og afslappet stemning. Uanset om du er til en stille øl med vennerne eller lidt venlig konkurrence, har vi faciliteterne klar.
-          Der er 2 poolborde til hyggelige dueller.
+          <p>Big Ben byder på to etager fyldt med hygge, underholdning og afslappet stemning. Uanset om du er til en stille øl med vennerne eller lidt venlig konkurrence, har vi faciliteterne klar.</p>
+          <p>Der er 2 poolborde til hyggelige dueller.
           Bordfodbold til de hurtige kampe.
           To skærme til live sport og store øjeblikke.
           Der kan lånes terninger og spillekort.
@@ -185,7 +186,9 @@ const backgroundStyle = {
   margin-top: 0;
   letter-spacing: 0.5px;
 }
-
+.main-heading{
+  opacity: 80%;
+}
 .info-section {
   display: flex;
   flex-direction: column;
