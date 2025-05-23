@@ -91,7 +91,7 @@ import { RouterLink } from 'vue-router'
 }
 
 .nav-center a:hover {
-  color: #ffffff;
+  color: #470101;
 }
 
 .social-buttons {

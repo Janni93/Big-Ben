@@ -92,7 +92,7 @@ h2 {
 }
 
 .footer-links a:hover {
-  color: white;
+  color: #470101;
 }
 
 .opening-hours {
