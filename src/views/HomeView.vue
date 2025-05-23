@@ -8,7 +8,7 @@ import galleri1 from '@/assets/mariaogsofie.jpg'
 import galleri2 from '@/assets/madsbigbenlille.jpg'
 import galleri3 from '@/assets/maria.jpg'
 import tilbud1 from '@/assets/studierabat.jpg'
-import tilbud2 from '@/assets/studierabat2.jpg'
+import tilbud2 from '@/assets/sultenplakat.jpg'
 
 
 
@@ -117,7 +117,7 @@ const backgroundStyle = {
 
      <section class="tilbud">
       <img :src="tilbud1" alt="studierabat" />
-      <img :src="tilbud2" alt="studierabat2" />
+      <img :src="tilbud2" alt="sultenplakat" />
     </section>
   </main>
 </template>
