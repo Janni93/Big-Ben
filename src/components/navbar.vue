@@ -23,7 +23,7 @@
     FACEBOOK
   </a>
   <a
-    href="https://www.instagram.com/"
+    href="https://www.instagram.com/bigbenvarde/"
     target="_blank"
     rel="noopener"
     class="instagram-btn"
@@ -91,7 +91,7 @@ import { RouterLink } from 'vue-router'
 }
 
 .nav-center a:hover {
-  color: #470101;
+  color: #ffffff;
 }
 
 .social-buttons {
