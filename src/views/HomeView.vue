@@ -62,6 +62,7 @@ const backgroundStyle = {
           <h2>Begivenheder & Livemusik</h2>
           <p>Vi tilbyder et bredt udvalg af kolde fadøl, specialøl fra det lokale bryggeri Warwick, farverige cocktails, lækre drinks og god cafémad leveret fra naborestauranten. Hvad end du kommer for at slappe af efter arbejde, fejre noget med vennerne eller opleve en sjov aften med quiz eller live musik, så har Big Ben noget at byde på. Desuden tilbyder vi udendørsservering, så du kan nyde solen, mens ølen kommer til dig.</p>
           <p>Følg med på vores socialemedier og se hvad der sker!</p>
+          
           <div class="social-buttons">
   <a
     href="https://www.facebook.com/bigbenpubvarde/?locale=fo_FO"
@@ -73,7 +74,7 @@ const backgroundStyle = {
     FACEBOOK
   </a>
   <a
-    href="https://www.instagram.com/"
+    href="https://www.instagram.com/bigbenvarde/"
     target="_blank"
     rel="noopener"
     class="instagram-btn"
