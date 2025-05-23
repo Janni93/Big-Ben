@@ -3,11 +3,14 @@ import bgImage from '@/assets/bigbenbaggrund.png'
 import heroVideo from '@/assets/herovideo.mp4'
 import billede1 from '@/assets/thomasbigben.jpg'
 import billede2 from '@/assets/bigbenude.jpg'
+import billede3 from '@/assets/bigbenindendørs.jpg'
 import galleri1 from '@/assets/mariaogsofie.jpg'
 import galleri2 from '@/assets/madsbigbenlille.jpg'
 import galleri3 from '@/assets/maria.jpg'
 import tilbud1 from '@/assets/studierabat.jpg'
 import tilbud2 from '@/assets/studierabat2.jpg'
+
+
 
 
 const backgroundStyle = {
@@ -100,7 +103,7 @@ const backgroundStyle = {
           </p>
         </div>
         <div class="info-image">
-          <img :src="billede1" alt="Pub billede 1" />
+          <img :src="billede3" alt="Pub billede 1" />
         </div>
       </div>
 </div>
